@@ -1,3 +1,1 @@
-export type Includes<T extends readonly any[], U> = {
-    [P in T[number]]: P
-}[U] extends U ? true : false;
+export type Includes<T extends readonly unknown[], U> = U extends T[number] ? true : false;
